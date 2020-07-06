@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>038-数组的高级方法.html</title>
+	<script>
+		//定义一个数组。
+		var arr = [1,3,5,8,9,15];
+	
+		/*数组的遍历：遍历不会生成新的数组,没有返回值
+		var result = arr.forEach(function(value,index){
+			console.log('value,index',value,index);
+		})
+		console.log(result);
+		*/
+
+
+		/*数组的映射：遍历数组,把函数的每一次返回值映射成新的数组并返回
+		var result = arr.map(function(value,index){
+			console.log('value,index',value,index);
+			return value *10;
+		})
+		console.log(result);
+		*/
+
+
+		
+		/*数组的过滤：遍历数组,把函数的每一次返回值为真的原数组中的值组成新的数组并返回
+		var result = arr.filter(function(value,index){
+			console.log('value,index',value,index);
+			return value>5;
+		})
+		console.log(result);
+		*/
+
+
+		/*数组的全真判断：遍历数组,所有值为真的情况下返回真,否则返回假
+		var result = arr.every(function(value,index){
+			console.log('value,index',value,index);
+			return value > 0;
+		})
+		console.log(result);
+		*/
+
+		//数组的有真判断：遍历数组,有一个值为真的情况下返回真,否则返回假
+		var result = arr.some(function(value,index){
+			console.log('value,index',value,index);
+			return value < 0;
+		})
+		console.log(result);
+
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

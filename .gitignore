@@ -1,0 +1,8 @@
+.DS_Store
+**/node_modules
+**/db/journal
+./001-html/resource
+**/folder.ini
+*.mp4
+*.mp3
+**/db

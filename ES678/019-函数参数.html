@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>019-函数参数.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	
+
+	/*	
+	function show(name,age){
+		name = name || 'Tom';//没有传值，就写默认的值hellow
+		age = age || 20;
+		console.log(name,age);
+	}
+	show('name',99);//name 99
+	*/
+
+	/*
+	function show(name){
+		name = name || 'Tom';//没有传值，就写默认的值hellow
+		// age = age || 20; 
+		if(typeof name === 'undefined'){
+			name = 'Tom';
+		}
+		console.log(name);
+	}
+	show('leo');
+	*/
+
+
+
+	let i = 99;
+	function show(age = i+1){
+		console.log(age);
+	}
+	show();
+	i = 100;
+	show();
+
+
+</script>
+</html>

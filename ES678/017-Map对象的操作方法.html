@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>017-Map对象的操作方法.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	//生成一个map对象
+	let obj1 = {name:"Tom"};
+	let map = new Map();
+	// console.log(map);
+	map.set('name','Tom');
+	map.set(obj1,'hellow');
+
+	/*
+	for(key of map.keys()){//获取键
+		console.log(key);
+	}
+	*/	
+	/*
+	for(value of map.values()){//获取值
+		console.log(value);
+	}
+	*/
+	/*
+	for(entry of map.entries()){
+		console.log(entry);
+	}
+	*/
+	
+	map.forEach(function(value,key){
+		console.log(value,key);
+	})
+
+
+	
+
+
+</script>
+</html>

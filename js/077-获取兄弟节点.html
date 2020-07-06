@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>077-获取兄弟节点.html</title>
+</head>
+<body>
+
+	<ul id="ul1">
+		<li>1</li>
+		<li>2</li>
+		<li id="li3">3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+	</ul>
+
+</body>
+<script>
+
+	var oLi3 = document.getElementById('li3');
+	console.log(oLi3);
+	var oUl = document.getElementById('ul1');
+	console.log(oUl);
+	var aEle = oUl.childNodes;
+
+	console.log(oLi3.previousSibling  ==aEle[4]);
+	console.log(oLi3.nextSibling ==aEle[5]);
+	console.log(oLi3.previousSibling  == oUl.childNodes[4]);
+	console.log(oLi3.nextSibling == oUl.childNodes[5]);
+	//前面这两个和后面这两个是一样的运行结果，只是赋的变量不一样
+
+	
+	console.log(oLi3.nextElementSibling);
+	console.log(oLi3.previousElementSibling);
+
+	console.log();
+	
+</script>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>048-数组.html</title>
+</head>
+<body>
+	<div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+<script>
+
+    /*
+     const likeArr = {//伪数组
+        0:'aaa',
+        1:'bbb',
+        2:'ccc',
+        length:3,
+    }
+    console.log('likeArr',likeArr);
+    console.log(Array.from(likeArr));//数组
+    */
+
+    /*
+    function fn(){
+        console.log('arguments',arguments);
+        console.log('Array.from(arguments)',Array.from(arguments));
+    }
+
+    fn(11,22);
+    */
+
+    /**/
+    function fn(){
+        console.log('arguments',arguments);
+        console.log('Array.from(arguments)',Array.from(arguments));
+    }
+
+    fn(11,22)
+    const arr = [11,22,33,44,88,100]
+
+    console.log(arr.find(n=>n>50));//利用箭头函数
+
+
+    //用法与find方法非常类似,返回第一个符合条件的数组成员的位置,如果所有成员都不符合条件,则返回-1。
+    console.log(arr.findIndex(n=>n>500));
+    
+    //ES7语法:Array.prototype.includes(搜索的值,[搜索的开始索引])
+    //作用:返回一个布尔值,表示某个数组是否包含给定的值
+    // console.log(arr.includes(44,4));
+    console.log(arr.includes(44));
+    
+
+
+    
+</script>
+</html>

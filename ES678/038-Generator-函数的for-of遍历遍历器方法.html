@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>038-Generator-函数的for-of遍历遍历器方法.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+    //for...of循环可以自动遍历 Generator 函数运行时生成的Iterator对象，且此时不再需要调用next方法。
+	function * gen(){
+        yield 1
+        yield 2
+        yield 3
+        yield 4
+    }
+
+    const g = gen();
+    
+
+    for(let v of g){
+        console.log(v);
+    }
+
+    
+    /*  
+    console.log(g.next());
+    console.log(g.next());
+    console.log(g.next());
+    console.log(g.next());
+    console.log(g.next());
+    */
+
+
+
+    
+</script>
+</html>

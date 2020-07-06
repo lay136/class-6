@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>002-let的i值问题-let.html</title>
+</head>
+<body>
+	<button>按钮1</button>
+	<button>按钮2</button>
+	<button>按钮3</button>
+	<button>按钮4</button>
+	<button>按钮5</button>
+
+</body>
+<script>
+	
+	// var name = 'Tom';
+	// var name = 'Leo';
+	// console.log(name);
+	
+	/*
+	let name = 'Tom';
+	let name = 'Leo';
+	console.log(name);
+	*/
+	
+	/*var oBtn = document.getElementsByTagName('button');
+	for(var i = 0;i<oBtn.length;i++){
+		oBtn[i].onclick = function(){//dom绑定事件的dom节点 是异步程序
+			console.log(i);
+		}
+	}
+	*/
+
+
+	/*
+	var oBtn = document.getElementsByTagName('button');
+	for(var i = 0;i<oBtn.length;i++){
+		oBtn[i].index = i;//存i值
+		oBtn[i].onclick = function(){//dom绑定事件的dom节点 是异步程序
+			console.log(this.index);
+		}
+	}
+	*/
+
+	/*
+	var oBtn = document.getElementsByTagName('button');
+	for(let i = 0;i<oBtn.length;i++){
+		(function(i){//形成了一个小闭包，每一次都会存i的值
+			oBtn[i].onclick = function(){
+				console.log(i);
+			}			
+		})(i)
+	}
+	*/
+
+
+	var oBtn = document.getElementsByTagName('button');
+	//for循环用let后，i变成块级域,也就是花括号中的块，每进入一次花括号就生成了一个块级域
+	for(let i = 0;i<oBtn.length;i++){
+		oBtn[i].onclick = function(){
+			console.log(i);
+		}
+	}
+
+</script>
+</html>

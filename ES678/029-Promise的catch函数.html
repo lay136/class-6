@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>029-Promise的catch函数.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	
+	let getLoadImgPromise = (url)=>{
+		let promise = new Promise((resolve,reject)=>{
+			let image = new Image();
+			image.onload = ()=>{
+				resolve(url);
+			}
+			image.onerror = ()=>{
+				reject(url);
+			}
+			image.src = url;
+
+		});
+		return promise;
+	}
+	let promise = getLoadImgPromise('image/ad2.jpg');
+	
+
+	/*
+	promise
+	.then((url)=>{
+		console.log(url+' success loaded....');
+	})
+	.catch((err)=>{
+		console.log('error::',err);
+	});
+	*/
+
+	/*
+	//3.reject在异步操作失败时(从pending变为rejected)调用,并将异步操作报出的错误作为参数传递出去
+	let promise = getLoadImgPromise('image/ad2.jpg');
+	console.log('a',promise);
+
+	let p = promise.then((url)=>{
+		console.log(url+' success loaded....');
+		console.log(promise);
+	},(url)=>{
+		console.log(url+' failed loaded....');
+		console.log(promise);
+	});
+	console.log('b',p);
+	*/
+
+
+	promise
+	.then((url)=>{//返回的还是promise对象，所以可以继续用catch调用
+		console.log(url+' success loaded....');
+		throw new Error('handle error');
+	})
+	.catch((err)=>{
+		console.log('error::',err);
+	});
+
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>137-DOM处理程序.html</title>
+</head>
+<body>
+	
+	<input type="button" id="btn1" value="点我">
+	<!-- <input type="button" id="btn2" value="点我删除事件"> -->
+
+</body>
+<script>
+	
+	var oBtn = document.getElementById('btn1');
+	// var oBtn2 = document.getElementById('btn2');
+	oBtn.onclick =function(){
+	 	alert('hihi');
+	 }
+	function show(){
+		alert('hellow');
+	}
+	
+	oBtn.addEventListener('click',show,false);
+	oBtn.addEventListener('click',function(){
+		alert('hahaha')
+	},false);
+	
+	oBtn.addEventListener('click',sayHi,false);
+	// oBtn.removeEventListener('click',show,false);
+	// oBtn.removeEventListener('click',sayHi,false);
+	// oBtn.removeEventListener('click',function(){
+	// 	alert('hahaha')
+	// },false);
+
+	
+</script>
+</html>

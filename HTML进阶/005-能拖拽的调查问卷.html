@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>005-能拖拽的调查问卷.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.page{
+			width: 1200px;
+			margin:50px auto;
+		}
+		.container{
+			float: left;
+			width: 600px;
+			padding: 0px 40px;
+			min-height: 600px;
+			text-align: center;
+			box-sizing: border-box;
+		}
+		.target-list{
+			float: left;
+			width: 600px;
+			min-height: 600px;
+			box-sizing: border-box;
+			border-left: 1px solid red;
+			padding: 20px;
+		}
+		.box{
+			width: 100%;
+			padding: 10px;
+			border: 1px dashed gray;
+			margin-top: 10px;
+		
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="page">
+		<div class="container">
+			<h2>调查问卷</h2>
+		</div>
+		<div class="target-list">
+			<div class="box" draggable='true'>
+				<label for="">姓名</label>
+				<input type="text" name="username">
+			</div>
+			<div class="box" draggable='true'>
+				<label for="">年龄</label>
+				<input type="text" name="age">
+			</div>
+			<div class="box" draggable='true'>
+				<label for="">籍贯</label>
+				<input type="text" name="age">
+			</div>
+			<div class="box" draggable='true'>
+				<label for="">建议</label>
+				<input type="text" name="age">
+			</div>
+			<div class="box" draggable='true'>
+				<label for="">爱好</label>
+				<input type="checkbox" name="hobby">
+				篮球
+				<input type="checkbox" name="hobby">
+				足球
+				<input type="checkbox" name="hobby">
+				羽毛球
+			</div>							
+		</div>
+	</div>
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+		var targetEle = null;
+		$('.target-list').on('dragstart','.box',function(){////设置数据
+			targetEle = this;
+		});
+
+		$('.container')
+		.on('drop',function(){//获取数据
+			$(this).append($(targetEle).clone());
+		})
+		.on('dragover',function(ev){
+			ev.preventDefault();
+		});
+		
+	})
+</script>
+</html>

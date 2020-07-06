@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>004-结构解析数组.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	
+	/*
+	var a = 1,
+		b = 2,
+		c = 3;
+	console.log(a,b,c);	
+	*/
+	
+	/*	
+	let [a,b,c] = [1,2,3];
+	console.log(a,b,c);	
+	*/
+
+	/*
+	let [a,[b,c],d] = [1,[2,2],4];
+	console.log(a,b,c,d);	
+	*/
+
+	/*
+	let [a,b,c] = [1,2];//没有的值，就是没有被定义
+	console.log(a,b,c);	
+	*/	
+
+	/*
+	let [a,[b,c],d] = [1,[2],4];
+	console.log(a,b,c,d);//c没有被定义，所以是undefined
+	*/	
+	
+
+	/*
+	let [a,b='tom',c=33] = [1,2,undefined];
+	console.log(a,b,c);	
+	*/
+	
+	/*
+	//可以在等号左边数组中用等号设置默认值,当等号左边数组中对应的右边位置的值是undefined(没有或者是undefined)时默认值才会生效,否则取右边的值
+	let [a,b='tom',c=33] = [1,undefined,undefined];//tom就是设置的默认值
+	console.log(a,b,c);
+	*/
+
+
+	//如果等号的右边不是数组,会报错
+	// let [a,b,c=33] = 11;
+
+
+
+</script>
+</html>
