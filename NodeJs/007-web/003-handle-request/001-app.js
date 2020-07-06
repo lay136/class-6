@@ -8,13 +8,14 @@ const mime = require('./mime.json')
 const server = http.createServer((req,res)=>{
     //1.获取请求地址
     const filePath = req.url;
-    console.log("url::",req.url);
+    // console.log("url::",req.url);
     //静态资源的处理
     const fliename = path.normalize(__dirname + '/static/' + filePath);
     //2.根据文件地址读取文件
     fs.readFile(fliename,{encoding:'utf-8'},(err,data)=>{
         //2.返回数据
         if(err){
+            console.log(err);
             res.setHeader('Content-type',"text/html;charset=UTF-8")
             res.statusCode = 404
             res.end('<h1>请求出错了</h1>')
