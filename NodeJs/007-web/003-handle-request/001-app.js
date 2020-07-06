@@ -24,7 +24,6 @@ const server = http.createServer((req,res)=>{
             //.css text/css
             //.html text/html
             const extname = path.extname(filePath)
-            // const mimeType = mime[extname] || 'text/plain'
             mimeType = mime[extname];
             res.statusCode = 200;
             res.setHeader('Content-Type', mimeType+';charset=utf-8');

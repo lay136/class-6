@@ -11,11 +11,11 @@
                     task:$input.val()
                 },
                 success:function(result){
-                    console.log(result)
+                    console.log(result);
                 }
 
             })
         }
     })
-})(jQuery)
+})(jQuery);
 

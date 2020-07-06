@@ -1,8 +1,7 @@
 {
-  "name": "NodeJs",
+  "name": "003-handle-request",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "001-app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,5 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "swig": "^1.4.2"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
