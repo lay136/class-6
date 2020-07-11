@@ -19,7 +19,7 @@ db.once('open',function(){
 })
 */
 
-db.once('open',()=>{
+db.once('open',function(){
 	    //1.定义Schema
 	    const UserSchema = new mongoose.Schema({
 	        name: String,
@@ -55,7 +55,7 @@ db.once('open',()=>{
 	   	*/
 	   	//3.3 更新
 	   	//设置某一个字段的值,如果匹配到的文档有该字段则修改没有则新增
-	  	UserModel.updateOne({name:"Tom"},{$set:{age:22}},(err,result)=>{
+	  	UserModel.updateOne({name:"Tom"},{$set:{age:22}},function(err,result){
 	        if(err){
 	            console.log('updateOne user error:',err);
 	        }else{
