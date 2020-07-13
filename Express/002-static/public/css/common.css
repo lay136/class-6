@@ -1,0 +1,156 @@
+.link{
+	text-decoration: none !important;
+}
+.link:hover{
+	color: #f65a8a !important;
+}
+.text-ellipsis{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+#kz-navbar .navbar-nav a{
+	font-size: 16px;
+	margin-right: 20px;
+}
+#kz-navbar .navbar-nav a:hover{
+	color: #f65a8a;
+}
+#kz-navbar .active a{
+	background: transparent;
+	color: #f65a8a;
+}
+#kz-navbar{
+	opacity: 0.8;
+}
+.main{
+	margin-top: 70px;
+}
+
+form{
+    width: 100%;
+    height: 300px;
+    padding: 10px 10px;
+
+    /*float: left;*/
+}
+.reg div {
+    position: relative;
+    margin-top: 35px;
+    zoom: 1;
+    display: block;
+}
+.reg input {
+    display: block;
+    position: relative;
+    float: left;
+    width: 328px;            
+    height: 44px;
+    padding: 5px 5px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    color: #666;
+    transition: .3s;
+    text-align: center;
+    /*float: left;*/
+}
+.reg .subBtn {
+    position: relative;
+    left: 75px;
+}
+.reg .subBtn input {
+    display: block;
+    /*float: left;*/
+    /*width: 350px;*/
+    left: -75px;
+    height: 50px;
+    border-radius: 3px;
+    border: 0;            
+    background-image: none;
+    background-color: #3f89ec;             
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+    margin-top: 20px;
+}
+.ad .thumbnail{
+	border: none;
+	height: 200px;
+	padding: 0;
+	transition: all 0.5s;
+}
+.ad .thumbnail img{
+	width: 100%;
+	height: 100%;
+}
+.ad .thumbnail:hover{
+	box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+}
+
+.content-item .panel-heading{
+	background: transparent;
+	border: none;
+	padding-left:0;
+}
+.content-item .panel-title{
+	border-left: 2px solid #f65a8a;
+	padding-left: 15px;
+}
+.content-item .panel-footer{
+	background: transparent;
+	border: none;	
+}
+.content-item .panel-footer-text{
+	margin-right: 20px;
+}
+.content-item:hover .panel-title a{
+	color: #f65a8a;
+}
+
+#page .pagination>li>a:hover{
+	color: #f65a8a;
+	background: #fff;
+}
+.custom-panel .panel-heading{
+	background: transparent;
+	border: none;
+}
+.custom-panel .panel-body{
+	background: #f7f7f7;
+}
+.img-me{
+	width: 100px;
+	height: 100px;
+}
+.hot-list .panel-body{
+	padding-left: 0;
+	padding-right: 0;
+}
+.hot-list .list-group-item{
+	border: none;
+	background: #f7f7f7;
+}
+.hot-list .list-group-item .link{
+	color: #333;
+	display: block;
+}
+footer{
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
