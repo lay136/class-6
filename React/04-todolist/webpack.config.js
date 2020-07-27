@@ -24,7 +24,7 @@ module.exports = {
     },
     module: {
         rules: [
-        //处理css文件
+            //处理css文件
             {
                 test: /\.css$/,
                 use: [
@@ -32,7 +32,7 @@ module.exports = {
                   'css-loader'
                 ]
             },
-        //处理图片
+            //处理图片
             {
                 test: /\.(png|jpg|gif)$/i,
                 use: [
@@ -44,7 +44,7 @@ module.exports = {
                     }
                 ]
             },
-        //bable
+            //bable
             {
                 test:/\.js$/,
                 exclude: /(node_modules)/,
