@@ -1,6 +1,7 @@
 import React,{ Component,Fragment } from 'react'
 import Item from './Iteam.js'
 
+
 import "./App.css"
 
 class App extends Component{
@@ -10,41 +11,6 @@ class App extends Component{
 	            list:["吃饭","睡觉","跑步","听音乐"],
 	            task:''
 	        }
-	    }
-	    static getDerivedStateFromProps(props, state){
-	        //根据props来修改state
-	        console.log('App getDerivedStateFromProps(props, state):',props, state)
-	        //用返回的对象和当前的state合并
-	        /*
-	        return {
-	            task:'hello'
-	        }
-	        */
-	       return null
-	    }
-	    shouldComponentUpdate(nextProps, nextState){
-	        //根据当前新的props或者新的state来决定到底需不需要更新DOM,提高效率,避免不必要的更新
-	       console.log('App shouldComponentUpdate(nextProps, nextState):',nextProps, nextState) 
-	       // return true
-	       if(nextState.task == 'l'){
-	        return false
-	       }else{
-	        return true
-	       }
-	    }  
-	    getSnapshotBeforeUpdate(prevProps, prevState){
-	        //保存真实DOM更新前的某些数据
-	        console.log('App getSnapshotBeforeUpdate(prevProps, prevState)',prevProps, prevState)
-	        return 123
-	    }
-	    //真实的更新DOM
-	    componentDidUpdate(prevProps, prevState,snapshot){
-	        //获取真实DOM更新前的某些数据
-	        console.log('App componentDidUpdate(prevProps, prevState,snapshot)',prevProps, prevState,snapshot)
-	    }      
-	    componentDidMount(){
-	        //发送ajax请求  卸载
-	        console.log('App componentDidMount');
 	    }
 	    handleAdd(){
 	        //数据驱动界面
