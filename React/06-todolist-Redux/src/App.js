@@ -2,6 +2,8 @@ import React,{ Component,Fragment } from 'react'
 import Item from './Iteam.js'
 import { Button,Input,Row,Col,List } from 'antd';
 
+import store from './store'
+
 import "./App.css"
 // import 'antd/dist/antd.css'
 
@@ -15,6 +17,10 @@ class App extends Component{
 	        }
 	        this.handleChange = this.handleChange.bind(this)
         	this.handleAdd=this.handleAdd.bind(this)
+        	this.handleDel = this.handleDel.bind(this)
+
+        	this.state = store.getState()
+        	store.subscribe(() => { this.setState(store.getState()) })
 	    }
 	    handleAdd(){
 	        //数据驱动界面
