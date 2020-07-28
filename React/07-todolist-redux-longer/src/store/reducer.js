@@ -38,11 +38,6 @@ export default (state=defaultState,action)=>{
         newState.list.splice(action.payload,1)
         return newState        
     }
-    if(action.type == LOAD_DATA){
-        const newState = JSON.parse(JSON.stringify(state))
-        newState.list = action.payload
-        return newState
-    }
 
     return state
 }
