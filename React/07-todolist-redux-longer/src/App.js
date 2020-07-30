@@ -10,6 +10,16 @@ import {
     getLoadInitDataAction
 } from './store/actionCreator.js'
 
+//设置跨域请求
+app.all('*', function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
+  res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
+  res.header("X-Powered-By", ' 3.2.1')
+  res.header("Content-Type", "application/json;charset=utf-8");
+  next();
+});
+
 class App extends Component{
 		constructor(props){
 	        super(props)
@@ -26,6 +36,7 @@ class App extends Component{
 	            store.dispatch(getLoadInitDataAction(result.data))
 	        })
 	        .catch(err=>{
+
 	            console.log(err)
 	        })
 	    }
