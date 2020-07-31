@@ -37,7 +37,8 @@ class App extends Component {
     constructor(props){
         super(props)
         this.state = {
-            isLogin:false
+            //判断是否是管理员,true即为是,fales即为错误的
+            isLogin:true // false
         }
     }
     render() {
