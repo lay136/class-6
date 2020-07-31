@@ -25,7 +25,7 @@ class User extends Component{
 class Admin extends Component{
     render(){
         return (
-            <Switch>
+            <Switch>////只能匹配之后的第一个，想要匹配第二个，需要用精确匹配
                 <Route exact path="/admin" render={()=><h2>this is admin home page</h2>} />
                 <Route path="/admin/profile" render={()=><h2>this is admin profile page</h2>} />
                 <Route path="/admin/:id" render={(route)=>(<h2>this is admin info page, admin id is {route.match.params.id}</h2>)} />
@@ -37,7 +37,7 @@ class App extends Component {
     constructor(props){
         super(props)
         this.state = {
-            isLogin:true
+            isLogin:false
         }
     }
     render() {
@@ -45,7 +45,7 @@ class App extends Component {
             return <Route
                     {...rest} 
                     render={(props)=>{
-                        return this.state.isLogin ? <Component {...props} /> : <h2>this is login page</h2>
+                        return this.state.isLogin ? <Component {...props} /> : <h2>please use Admin login page</h2>
                     }}
                 />
         }

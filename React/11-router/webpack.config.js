@@ -13,6 +13,7 @@ module.exports = {
         //chunk名称:文件路径
         index:'./src/index.js',     
     },
+    devtool: 'inline-source-map',
     //单入口写法二
     //entry: './src/index.js',
     //指定出口
@@ -20,7 +21,8 @@ module.exports = {
         //出口文件名称
         filename: '[name].[hash].bundle.js',
         //输出路径
-        publicPath:publicPath,
+        publicPath:publicPath,//路径起始地址
+        // publicPath:'/',
         //出口的文件所在的目录
         path: path.resolve(__dirname, 'dist')
     },
@@ -61,17 +63,19 @@ module.exports = {
         ]
     },
     plugins:[
+        new CleanWebpackPlugin(),
         new htmlWebpackPlugin({
             template:'./src/index.html',//模板文件
             filename:'index.html',//输出的文件名
             inject:true,//脚本写在那个标签里,默认是true(在body结束后)
             hash:true//给生成的js/css文件添加一个唯一的hash
         }),
-        new CleanWebpackPlugin()
+        // new CleanWebpackPlugin()
     ],
     devServer:{
         contentBase: './dist',//内容的目录
+        // changeOrigin:true,
         port:8080,//服务运行的端口
-        historyApiFallback:true
+        historyApiFallback:true//只刷新页面内容，不向后台发送请求
     }           
 };
