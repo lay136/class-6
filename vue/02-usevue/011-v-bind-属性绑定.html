@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>011-v-bind-属性绑定.html</title>
+</head>
+<body>
+    <div id="app">
+       <a href="https://www.baidu.com">淘宝1</a>
+        <!-- 错误写法： <a href="{{Url}}">淘宝2</a> -->
+        
+        <!-- v-bind: 全称写法 -->
+        <!-- <a v-bind:href="Url">淘宝3</a> -->
+
+        <!-- v-bind: 缩略写法 -->
+        <a :href="Url">淘宝4</a>
+    </div>
+</body>
+<script src="js/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            Url:'https://www.baidu.com'
+        }
+    })
+</script>
+</html>
