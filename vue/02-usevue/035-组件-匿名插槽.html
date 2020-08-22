@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>035-组件-匿名插槽.html</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+     <div id="app">
+        <layout>
+            首页主要内容
+        </layout>
+    </div>
+    <!--模版需要写在挂载组件的外面-->
+    <template id="layout">
+        <div>
+            <nav>顶部导航</nav>
+            <slot>主要内容</slot>
+            <slot>主要内容</slot>
+            <footer>底部</footer>
+        </div>
+    </template>   
+</body>
+<script src="js/vue.js"></script>
+<script>
+    //全局注册的行为必须在根 Vue 实例 (通过 new Vue) 创建之前发生
+    //注意:定义要放在vue实例生成之前
+    Vue.component('layout',{
+        
+        template:'#layout',
+    })
+
+    var vm1 = new Vue({
+        el: '#app',
+        data: {
+ 
+        },
+       
+    })
+
+</script>
+</html>
