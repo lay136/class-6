@@ -1,0 +1,52 @@
+动画-animate.css
+下载animate.css并引入到页面,下载地址https://daneden.github.io/animate.css/
+
+
+
+
+
+
+
+
+
+
+
+
+3、请描述一下cookies，sessionStorage和localStorage的区别？
+sessionStorage和localStorage是HTML5 Web Storage API提供的，可以方便的在web请求之间保存数据。有了本地数据，就可以避免数据在浏览器和服务器间不必要地来回传递。sessionStorage、localStorage、cookie都是在浏览器端存储的数据，其中sessionStorage的概念很特别，引入了一个“浏览器窗口”的概念。sessionStorage是在同源的同窗口（或tab）中，始终存在的数据。也就是说只要这个浏览器窗口没有关闭，即使刷新页面或进入同源另一页面，数据仍然存在。关闭窗口后，sessionStorage即被销毁。同时“独立”打开的不同窗口，即使是同一页面，sessionStorage对象也是不同的cookies会发送到服务器端。其余两个不会。Microsoft指出InternetExplorer8增加cookie限制为每个域名50个，但IE7似乎也允许每个域名50个cookie。
+Firefox每个域名cookie限制为50个。
+Opera每个域名cookie限制为30个。
+Firefox和Safari允许cookie多达4097个字节，包括名（name）、值（value）和等号。
+Opera允许cookie多达4096个字节，包括：名（name）、值（value）和等号。
+InternetExplorer允许cookie多达4095个字节，包括：名（name）、值（value）和等号。
+
+4、描述下“reset”CSS文件的作用和使用它的好处。
+
+因为浏览器的品种很多，每个浏览器的默认样式也是不同的，所以定义一个css reset可以使各浏览器的默认样式统一。
+
+ 
+
+5、解释下JavaScript中this是如何工作的。
+
+this永远指向函数运行时所在的对象，而不是函数被创建时所在的对象。匿名函数或不处于任何对象中的函数指向window 。
+
+1.如果是call，apply,with，指定的this是谁，就是谁。
+
+2.普通的函数调用，函数被谁调用，this就是谁。
+
+6、call和.apply的区别是什么？
+
+call方法: 
+语法：call(thisObj，Object) 
+定义：调用一个对象的一个方法，以另一个对象替换当前对象。 
+说明：call 方法可以用来代替另一个对象调用一个方法。call 方法可将一个函数的对象上下文从初始的上下文改变为由 thisObj 指定的新对象。 如果没有提供 thisObj 参数，那么 Global 对象被用作 thisObj。 
+apply方法： 
+语法：apply(thisObj，[argArray]) 
+定义：应用某一对象的一个方法，用另一个对象替换当前对象。 
+说明：如果 argArray 不是一个有效的数组或者不是 arguments 对象，那么将导致一个 TypeError。如果没有提供 argArray 和 thisObj 任何一个参数，那么 Global 对象将被用作 thisObj， 并且无法被传递任何参数。
+
+对于apply和call两者在作用上是相同的，但两者在参数上有以下区别： 
+对于第一个参数意义都一样，但对第二个参数：apply传入的是一个参数数组，也就是将多个参数组合成为一个数组传入，而call则作为call的参数传入（从第二个参数开始）。如 func.call(func1,var1,var2,var3)对应的apply写法为：func.apply(func1,[var1,var2,var3])同时使用apply的好处是可以直接将当前函数的arguments对象作为apply的第二个参数传入。
+
+
+

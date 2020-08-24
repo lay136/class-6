@@ -1,10 +1,6 @@
 import React,{ Component,Fragment } from 'react'
 import Item from './Iteam.js'
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 9785c68bc67b6d34ff566f1062835c05d487720f
 import "./App.css"
 
 class App extends Component{
@@ -64,7 +60,6 @@ class App extends Component{
 	            list:[...preState.list,preState.task],
 	            task:''
 	        }))       
->>>>>>> 9785c68bc67b6d34ff566f1062835c05d487720f
 	    }
 	   	handleChange(ev){
 			const task = ev.target.value
@@ -76,11 +71,9 @@ class App extends Component{
 	        // console.log(index)
 	        const list = [...this.state.list]
 	        list.splice(index,1)
-<<<<<<< HEAD
-	        this.setState({
-	            list
-	        })
-=======
+	        // this.setState({
+	        //     list
+	        // })
 	        this.setState(()=>({
             	list
         	}))

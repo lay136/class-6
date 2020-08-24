@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>042-动画-过渡类.html</title>
+    <!-- 引用animate.css -->
+    <!-- <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    /> -->
+    <link rel="stylesheet" href="css/animate.css">
+   
+</head>
+<body>
+	<div id="app">
+        <button @click="show = !show">切换</button>
+   		<transition 
+	        enter-active-class="animated bounce"
+	        leave-active-class="animated flash"
+	       	appear
+		>
+	        <p v-if="show">hello</p>
+       </transition>
+	</div>
+</body>
+<script src="js/vue.js"></script>
+<script>
+	var vm = new Vue({
+	    el: '#app',
+	    data: {
+	       show:true
+	    },
+	})
+</script>
+</html>
