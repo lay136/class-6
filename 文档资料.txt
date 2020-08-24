@@ -2,7 +2,7 @@
 下载animate.css并引入到页面,下载地址https://daneden.github.io/animate.css/
 
 
-
+npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 
 
