@@ -4,8 +4,13 @@
 
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 
-
-
+≤Ω÷Ë£∫
+npm install -g@vue/cli
+vue --version
+npm install -g @vue/cli-init
+vue init webpack my-project
+cd my-project
+npm run dev
 
 
 
