@@ -11,6 +11,49 @@ npm install -g @vue/cli-init
 vue init webpack my-project
 cd my-project
 npm run dev
+npm run serve
+
+
+
+
+
+sublime text3 安装 vue 插件
+
+vue 文件高亮
+# sublime 安装程序
+Package Control
+
+# 执行安装
+Install Package
+
+# vue 语法高亮插件
+# Vue Syntax Highlight
+
+# 颜色高亮插件
+Color Highlighter
+
+# 自动补全注释插件
+DocBlockr
+
+# 使用仿CSS选择器的语法来生成代码插件
+Emmet
+
+# 格式化 HTML, CSS, JS （快捷键：Ctrl+Shift+h）插件
+# HTML-CSS-JS Prettify
+
+script 中的 es6 代码高亮
+<!-- 安装 vue 插件 -->
+ecmascript syntax
+<!-- 安装 vue 插件，vue文件里面写成：<script type='text/ecmascript-6'></script> -->
+vuejs complete package
+style 标签支持 stylus 高亮
+<!--安装 vue插件，vue文件里面写成：<style lang='stylus'></style> -->
+stylus
+Git 版本控制
+# 可以在行号前标记处哪些行是新加，删除和修改的插件
+Git Gutter
+
+
 
 
 
