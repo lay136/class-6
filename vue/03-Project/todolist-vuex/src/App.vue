@@ -2,18 +2,9 @@
 <template>
     <div id="app">
         <!--3.使用组件-->
-        <Header :addTodo="addTodo" />
-        <List :todos="todos" :delTodo="delTodo" />
-        <Footer 
-            :todos="todos" 
-            :selectAllTodo="selectAllTodo" 
-            :delAllDone="delAllDone"
-        />
-        <!--
         <Header />
         <List  />
-        <Footer /> 
-        -->
+        <Footer />
     </div>
 </template>
 
@@ -30,40 +21,6 @@
             Header,
             List,
             Footer,
-        },
-        data(){
-            return {
-                todos:[
-                    {
-                        task:'睡觉',
-                        done:true
-                    },
-                    {
-                        task:'吃饭',
-                        done:true
-                    },
-                    // {
-                    //     task:'敲代码',
-                    //     done:true
-                    // },                      
-                ]
-            }
-        },
-        methods:{
-            addTodo(todo){
-                this.todos.unshift(todo)
-            },
-            delTodo(index){
-                this.todos.splice(index,1)
-            },
-            selectAllTodo(value){
-                this.todos.forEach((item)=>{
-                    item.done = value
-                })
-            },
-            delAllDone(){
-                this.todos = this.todos.filter(item=>!item.done)
-            }
         }
     }
 </script>

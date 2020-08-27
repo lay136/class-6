@@ -27,7 +27,7 @@
                 //1.校验数据
                 const task = this.task.trim()
                 if(!task){
-                    alert('请输入任务')
+                    alert('请输入内容')
                     return
                 }
                 //2.封装任务对象
