@@ -7,11 +7,12 @@ const comment = {
 /* GET home page. */
 router.get('/', function(req, res, next) {
     var xss = req.query.xss
-    res.set('X-XSS-Protection',0)
-    // res.set('X-XSS-Protection',1)
-    // res.set('X-XSS-Protection','1;mode=block')
-    // res.set('X-XSS-Protection','1; report=https://www.baidu.com')
+    res.set('X-XSS-Protection',0);
+    // res.set('X-XSS-Protection',1);
+    // res.set('X-XSS-Protection','1;mode=block');
+    // res.set('X-XSS-Protection','1; report=https://www.baidu.com');
     res.render('index', {title:'xss test', xss: xss });
+
 });
 router.get('/add',function(req,res){
     var val = req.query.val
