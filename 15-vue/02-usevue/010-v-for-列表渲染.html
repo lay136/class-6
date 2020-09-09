@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>010-v-for-列表渲染.html</title>
+</head>
+<body>
+    <div id="app">
+        <table>
+            <tr>
+                <th>姓名：</th>
+                <th>年龄：</th>
+                <th>成绩：</th>
+            </tr> 
+            <!-- 也可以用 of 替代 in 作为分隔符，因为它更接近 JavaScript 迭代器的语法 -->
+            <tr v-for="person of persons">
+                <td>{{person.name}}</td>
+                <td>{{person.age}}</td>
+                <td>{{person.score}}</td>
+            </tr>           
+        </table>
+    </div>
+</body>
+<script src="js/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            persons:[
+                {name:'Tom',age:18,score:50},
+                {name:'Marry',age:20,score:88},
+                {name:'Petter',age:21,score:90},
+            ]
+
+        }
+    })
+</script>
+</html>

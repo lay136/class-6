@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>101-数码时钟.html</title>
+	<style>
+
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: #000;
+		}
+		#Timer{
+			margin-top: 200px;
+			text-align: center;
+			font-size: 72px;
+			color: #fff;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="Timer"></div>
+
+</body>
+<script>
+	
+	var oTimer = document.getElementById('Timer');
+	// console.log(oTimer);
+	function to2Str(num){
+		if(num < 10){
+			return '0'+num;
+		}else{
+			return ''+num;
+		}
+	}
+
+	function handleTimer(){
+		var today = new Date();
+		// console.log(today);
+		// console.log(typeof today);
+		var iHour = today.getHours();
+		var iMinute = today.getMinutes();
+		var iSecond = today.getSeconds();
+		// console.log(iHour);
+		// console.log(iMinute);
+		// console.log(iSecond);
+		oTimer.innerHTML = to2Str(iHour) + ':' + to2Str(iMinute) + ':' + to2Str(iSecond);
+	}
+	setInterval(handleTimer,1000);
+	handleTimer();
+	
+</script>
+</html>

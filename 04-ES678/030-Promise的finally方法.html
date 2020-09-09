@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>030-Promise的finally方法.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	//生成处理dom事件的方法
+	let getLoadImgPromise = (url)=>{
+		let promise = new Promise((resolve,reject)=>{
+			let image = new Image();
+			image.onload = ()=>{
+				resolve(url);
+			}
+			image.onerror = ()=>{
+				reject(url);
+			}
+			image.src = url;
+		});
+		return promise;
+	}
+
+	let promise = getLoadImgPromise('image/ad2.jpg');
+
+	promise
+	.then((url)=>{
+		console.log(url+' success loaded....');
+		throw new Error('handle error');
+	})
+	.catch((err)=>{
+		console.log('error::',err);
+	});
+</script>
+</html>

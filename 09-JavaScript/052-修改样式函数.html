@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>052-修改样式函数.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box,#box1{
+			width: 200px;
+			height: 200px;
+			border: 1px solid;
+			margin-top: 10px;
+		}
+	</style>
+	
+</head>
+<body>
+
+	<button id="btn1">变宽</button>	
+	<button id="btn2">变高</button>	
+	<button id="btn3">变颜色</button>
+	<div id="box">你好</div>
+	<div id="box1">你好</div>	
+
+</body>
+<script>
+	
+	// function css(obj,attr,val){
+	// 	obj.style[attr] = val;
+	// }
+
+	function css(obj,attr,val){
+		obj.style[attr] = val;//val不能使用字符串，他是一个值。不能带引号
+	//	变量名    参数名 =  值
+	}
+
+	var oBtn1 = document.getElementById('btn1');
+	var oBtn2 = document.getElementById('btn2');
+	var oBtn3 = document.getElementById('btn3');
+	var oBox = document.getElementById('box');
+	var oBox1 = document.getElementById('box1');
+	oBtn1.onclick = function(){
+		css(oBox,'width','400px');
+		css(oBox1,'width','400px');
+	}
+	oBtn2.onclick = function(){
+		css(oBox,'height','400px');
+		css(oBox1,'height','400px');
+	}
+	oBtn3.onclick = function(){
+		css(oBox,'background','red');
+		css(oBox1,'background','blue');
+	}
+
+</script>
+</html>

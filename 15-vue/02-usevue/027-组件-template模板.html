@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>027-组件-template模板.html</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+    </style>
+</head>
+<body>
+     <div id="app1">
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+    </div>
+    <!--模版必须要写在挂载组件(DOM)的外面-->
+    <template id="button-counter">
+        <button @click="count++">你点击了{{ count }} 次</button>
+    </template>   
+</body>
+<script src="js/vue.js"></script>
+<script>
+    //全局注册的行为必须在根 Vue 实例 (通过 new Vue) 创建之前发生
+    //注意:定义要放在vue实例生成之前
+    Vue.component('button-counter',{
+        data(){
+            return {
+                count:0
+            }
+        },
+        template:'#button-counter'
+    })
+
+    var vm1 = new Vue({
+        el: '#app1',
+        data: {
+
+        }
+    })
+
+</script>
+</html>
