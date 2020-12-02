@@ -18,12 +18,23 @@
 			console.log('sfsdf');
 		})()
 
-
 		;(function(){
 			console.log('dfsdf22222');
 		})();
 
 
+		var temp;
+			$.ajax({
+			 async: false,
+			  type : "post",
+			  url : defaultpostdata.url,
+			  datatype : 'json'，
+			  success : function(data) {
+			     temp=data;
+			  }
+			});
+			alert(temp);
+            	
 
 	</script>
 </head>
